@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Top-Jacket</title>
+  </head>
+  <body id="body" class="bg-grey lg:pt-20 lg:px-20 pt-10 px-6">
+    <div id="bginner" class="bg-white h-[120vh] w-full">
+      <nav class="flex font-mono lg:justify-end lg:justify-items-end lg:p-4">
+        <button class="rounded-2xl p-2 hover:bg-black hover:text-white">
+          About
+        </button>
+        <button
+          class="lg:ml-3 ml-1 rounded-2xl p-2 hover:bg-black hover:text-white"
+        >
+          News
+        </button>
+        <button
+          class="lg:ml-3 ml-1 rounded-2xl p-2 hover:bg-black hover:text-white"
+        >
+          Contact
+        </button>
+        <i
+          class="ri-shopping-bag-line ml-4 mt-2 bg-black text-white text-lg rounded-full w-9 h-9 flex justify-center items-center"
+        ></i>
+        <button id="mode">
+          <i
+            id="icon"
+            class="ri-moon-fill ml-4 mt-2 bg-black text-white text-lg rounded-full w-9 h-9 flex justify-center items-center"
+          >
+          </i>
+        </button>
+      </nav>
+
+      <div class="lg:w-3/4 pl-8 w-[90%]">
+        <h1
+          class="font-sans lg:text-[3rem] lg:text-left lg:p-9 font-normal text-[2rem] p-2 text-center pt-14"
+        >
+          Come shop us , At Vidit Rajpurohit Store.
+        </h1>
+      </div>
+      <div class="lg:w-full lg:gap-28 lg:ml-16 w-full mt-20 lg:flex">
+        <div class="px-10">
+          <p class="font-mona">
+            Exclusive brands aspire for the label haute couture,but the term is
+            technically limited to members.
+          </p>
+        </div>
+
+        <div class="lg:w-1/4 text-center mt-20 mb-10 w-full px-10">
+          <h2
+            class="font-mono h2KeUper1 lg:text-xl border-t-2 border-black lg:leading-[4rem] leading-[4rem]"
+          >
+            Add to Cart <i class="ri-arrow-right-up-line"></i>
+          </h2>
+          <h2
+            class="font-mono lg:text-xl border-t-2 border-black lg:leading-[4rem] leading-[4rem]"
+          >
+            Product details <i class="ri-arrow-right-up-line"></i>
+          </h2>
+          <h2
+            class="font-mono h2KeUper lg:text-xl border-t-2 border-black lg:leading-[4rem] leading-[4rem]"
+          >
+            Shipping <i class="ri-arrow-right-up-line"></i>
+          </h2>
+        </div>
+      </div>
+
+      <img class="lg:h-[20rem] h-[14rem] w-full" src="image.jpg " alt="" />
+    </div>
+    <script>
+      let mode = document.querySelector("#mode");
+      let bginner = document.querySelector("#bginner");
+      let h1 = document.querySelectorAll("h1");
+      let h2 = document.querySelectorAll("h2");
+      let para = document.querySelectorAll("p");
+      let darkMode = false;
+      let body = document.querySelector("#body");
+      let icon = document.querySelector("#icon");
+
+      mode.addEventListener("click", function bgchanger() {
+        if (darkMode) {
+          bginner.style.backgroundColor = "white";
+
+          h2.forEach((element) => {
+            element.style.borderColor = "black";
+          });
+
+          body.style.backgroundColor = "grey";
+          icon.style.backgroundColor = "black";
+          icon.style.color = "white";
+          bginner.style.color = "black";
+
+          darkMode = false;
+        } else {
+          bginner.style.backgroundColor = "black";
+          bginner.style.color = "white";
+
+          h2.forEach((element) => {
+            element.style.borderColor = "white";
+          });
+
+          body.style.backgroundColor = "#1E293B";
+          icon.style.backgroundColor = "white";
+          icon.style.color = "black";
+
+          darkMode = true;
+        }
+
+        console.log("Clicked");
+      });
+    </script>
+  </body>
+</html>
